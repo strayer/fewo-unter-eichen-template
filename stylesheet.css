@@ -2,7 +2,7 @@ html, body {
 	background-color: #999966;
 	margin: 0;
 	padding: 0;
-	font-family: Arial;
+	font-family: Arial, sans-serif;
 	font-size: 11px;
 	color: #333333;
 }
@@ -10,10 +10,14 @@ html, body {
 h1#title {
 	font: bold 18px times new roman;
 	letter-spacing: 0.4em;
-	color: #333300;
-	margin-left: 15px;
+	margin: 10px 10px 10px 15px;
 	padding-top: 5px;
 	padding-bottom: 5px;
+}
+
+h1#title a {
+	color: #333300;
+	text-decoration: none;
 }
 
 div#menu {
@@ -25,7 +29,7 @@ div#menu {
 
 div#menu a {
 	margin-left: 20px;
-	font-family: Arial;
+	font-family: Arial, sans-serif;
 	font-size: 10px;
 	color: #336666;
 	vertical-align: middle;
@@ -34,16 +38,23 @@ div#menu a {
 	text-decoration: underline;
 }
 
+div#menu a.active {
+	font-weight: bold;
+	font-size: 11px;
+}
+
 div#menu a:hover {
 	color: #993300;
 }
 
 div#container {
-	overflow: auto;
+	overflow: hidden;
 	border-bottom: 1px solid white;
-	background-color: white;
-	background-image: url(images/description_background.gif);
-	background-repeat: repeat-y;
+	background: white url(images/description_background.gif) repeat-y;
+}
+
+div#inner_container {
+	width: 880px;
 }
 
 div#description {
@@ -55,7 +66,7 @@ div#description span {
 	display: block;
 	margin: 20px;
 	text-align: justify;
-	font-family: georgia;
+	font-family: georgia, serif;
 	font-size: 12px;
 	line-height: 18px;
 	color: #336666;
@@ -63,14 +74,37 @@ div#description span {
 
 div#content {
 	float: left;
-	padding: 50px;
-	padding-top: 30px;
+	padding: 30px 50px 50px;
+	width: 550px;
 }
 
 div#content h1 {
 	color: #CC3300;
 	font-size: 20px;
-	font-family: georgia;
+	font-family: georgia, serif;
 	letter-spacing: 0.1em;
 	font-weight: normal;
+	margin-bottom: 10px;
+}
+
+div#content a {
+	color: #C00;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+div#content a:hover {
+	text-decoration: underline;
+}
+
+div#content ul,
+div#content p {
+	margin: 10px 0;
+}
+
+div#content li {
+	list-style: disc inside;
+	margin-left: 5px;
+	margin-top: 2px;
+	margin-bottom: 2px;
 }
