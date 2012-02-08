@@ -136,3 +136,7 @@ strong {
 .csc-mailform input[type=submit] {
 	padding: 5px;
 }
+
+table.contenttable td {
+    padding: 2px;
+}
