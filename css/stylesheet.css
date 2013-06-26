@@ -547,47 +547,47 @@ strong {
 #menu a.active:hover {
   color: #336666;
 }
-div#content {
+#content {
   float: left;
   padding: 20px;
   width: 723px;
 }
-div#content h2,
-div#content h3,
-div#content h4,
-div#content h5,
-div#content h6 {
+#content h2,
+#content h3,
+#content h4,
+#content h5,
+#content h6 {
   font-family: "Libre Baskerville", sans-serif;
   letter-spacing: 0.1em;
   margin: 0 0 10px 0;
   font-weight: normal;
   color: #cc0000;
 }
-div#content h2 {
+#content h2 {
   font-size: 14pt;
 }
-div#content h3 {
+#content h3 {
   font-size: 12pt;
 }
-div#content h4 {
+#content h4 {
   font-size: 100%;
 }
-div#content a {
+#content a {
   color: #cc0000;
   text-decoration: none;
   font-weight: bold;
 }
-div#content a:hover {
+#content a:hover {
   text-decoration: underline;
 }
-div#content ul {
+#content ul {
   padding: 0;
 }
-div#content ul,
-div#content p {
+#content ul,
+#content p {
   margin: 10px 0;
 }
-div#content li {
+#content li {
   list-style: disc inside;
   margin-left: 5px;
   margin-top: 2px;
