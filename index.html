@@ -122,17 +122,16 @@
 		if (window.location.href.match(/\/studio\//))
 		{
 			$(document).ready(function() {
-				function() {
-					$(".fancybox").fancybox({
-						helpers: {
-							thumbs: {
-								width: 50,
-								height: 50
-							},
-							buttons: {}
-						}
-					});
-				}
+				var fancy_options = {
+					helpers: {
+						thumbs: {
+							width: 50,
+							height: 50
+						},
+						buttons: {}
+					}
+				};
+				$(".fancybox").fancybox(fancy_options);
 			});
 		}
 	</script>
