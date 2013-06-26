@@ -6,14 +6,11 @@
 	<title>Ferienwohnung "Unter Eichen" in Lingen</title>
 
 	<!-- Stylesheet -->
-	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.css">
-	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-buttons.css">
-	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.css">
+	<link rel="stylesheet" href="js/fancybox/jquery.fancybox.css">
+	<link rel="stylesheet" href="js/fancybox/helpers/jquery.fancybox-buttons.css">
+	<link rel="stylesheet" href="js/fancybox/helpers/jquery.fancybox-thumbs.css">
 	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Gudea:700|Open+Sans|Libre+Baskerville:700">
 	<link rel="stylesheet" href="css/stylesheet.css">
-
-	<!-- JavaScript -->
-	<script src="//cdnjs.cloudflare.com/ajax/libs/headjs/0.99/head.min.js"></script>
 
 	<!-- Allgemeiner Kram -->
 	<meta name="viewport" content="width=745">
@@ -93,32 +90,37 @@
 		<meta itemprop="longitude" content="7.337637" />
 	</div>
 
+	<script src="js/jquery-1.10.1.min.js"></script>
+	<script src="js/fancybox/jquery.fancybox.pack.js"></script>
+	<script src="js/fancybox/helpers/jquery.fancybox-buttons.js"></script>
+	<script src="js/fancybox/helpers/jquery.fancybox-thumbs.js"></script>
 	<script>
 		var _gaq = _gaq || [];
 		_gaq.push(['_setAccount', 'UA-36080374-1']);
 		_gaq.push(['_gat._anonymizeIp']);
 		_gaq.push(['_trackPageview']);
 
-		head.ready('piwik', function() {
-			try {
-				var piwikTracker = Piwik.getTracker("//piwik.olle-orks.org/piwik.php", 5);
-				piwikTracker.trackPageView();
-				piwikTracker.enableLinkTracking();
-			} catch( err ) {}
-		});
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
 
-		head.js(
-			"//google-analytics.com/ga.js",
-			{piwik: "//piwik.olle-orks.org/piwik.js"}
-		);
+		var _paq = _paq || [];
+		_paq.push(["trackPageView"]);
+		_paq.push(["enableLinkTracking"]);
+
+		(function() {
+			var u=(("https:" == document.location.protocol) ? "https" : "http") + "://piwik.olle-orks.org/";
+			_paq.push(["setTrackerUrl", u+"piwik.php"]);
+			_paq.push(["setSiteId", "5"]);
+			var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+			g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+		})();
 
 		if (window.location.href.match(/\/studio\//))
 		{
-			head.js(
-				"//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.js",
-				"//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.pack.js",
-				"//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-buttons.js",
-				"//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.js",
+			$(document).ready(function() {
 				function() {
 					$(".fancybox").fancybox({
 						helpers: {
@@ -130,7 +132,7 @@
 						}
 					});
 				}
-			);
+			});
 		}
 	</script>
 </body>
