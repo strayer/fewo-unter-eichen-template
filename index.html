@@ -32,13 +32,13 @@
 	<meta property="og:image" content="http://fewo-unter-eichen.de/fileadmin/templates/images/eingang.jpg">
 	<meta property="og:description" content="Gelegen in einer ruhigen Wohnsiedlung, knapp 2 km vom Stadtzentrum entfernt, befindet sich in einem seperaten Anbau einer restaurierten Hofstelle mit altem Baumbestand und großzügiger Gartenanlage die Ferienwohnung &quot;Unter Eichen&quot;">
 </head>
-<body>
-	<h1 id="title"><a href="/">Ferienwohnung &#34;Unter Eichen&#34; in Lingen &#9733;&#9733;&#9733;</a></h1>
+<body itemscope itemtype="http://schema.org/Hotel">
+	<h1 id="title" itemprop="name"><a href="/">Ferienwohnung &#34;Unter Eichen&#34; in Lingen &#9733;&#9733;&#9733;</a></h1>
 
 	<div id="container">
 		<div id="description">
-			<img src="images/eingang.jpg" alt="" width="230" height="172">
-			<span>Gelegen in einer ruhigen Wohnsiedlung, knapp 2 km vom Stadtzentrum Lingen entfernt, befindet sich in einem seperaten Anbau einer restaurierten Hofstelle mit altem Baumbestand und großzügiger Gartenanlage die Ferienwohnung "Unter Eichen"</span>
+			<img itemprop="image" src="images/eingang.jpg" alt="" width="230" height="172">
+			<span itemprop="description">Gelegen in einer ruhigen Wohnsiedlung, knapp 2 km vom Stadtzentrum Lingen entfernt, befindet sich in einem seperaten Anbau einer restaurierten Hofstelle mit altem Baumbestand und großzügiger Gartenanlage die Ferienwohnung "Unter Eichen"</span>
 		</div>
 		<div id="inner_container">
 			<div id="menu">
@@ -77,6 +77,20 @@
 			</div>
 		</div>
 		<div style="clear: both;">&nbsp;</div>
+
+		<div id="footer" itemscope itemtype="http://schema.org/PostalAddress">
+			<div class="spacer"></div>
+			<span itemprop="name">Ferienwohnung "Unter Eichen"</span>,
+			<span itemprop="streetAddress">Am Strootbach 7a</span>,
+			<span itemprop="postalCode">49809</span> <span itemprop="addressLocality">Lingen</span>
+			|
+			<a href="impressum">Impressum</a>
+		</div>
+	</div>
+
+	<div style="display: none;" itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates">
+		<meta itemprop="latitude" content="52.518839" />
+		<meta itemprop="longitude" content="7.337637" />
 	</div>
 
 	<script>

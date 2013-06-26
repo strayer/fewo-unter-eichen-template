@@ -593,6 +593,32 @@ strong {
   margin-top: 2px;
   margin-bottom: 2px;
 }
+#footer {
+  background-color: #a4c2c2;
+  height: 36px;
+  line-height: 36px;
+  border-top: 1px solid white;
+  padding: 0 10px;
+  color: #336666;
+  margin-left: 230px;
+  position: relative;
+}
+#footer .spacer {
+  position: absolute;
+  left: 0px;
+  height: 100%;
+  background-color: #fff;
+  width: 1px;
+  overflow: hidden;
+}
+#footer a,
+#footer a:hover {
+  color: #336666;
+  text-decoration: none;
+}
+#footer a:hover {
+  color: #cc0000;
+}
 .csc-mailform li {
   list-style: none !important;
 }
