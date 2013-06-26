@@ -2,16 +2,20 @@ html, body {
 	background-color: #999966;
 	margin: 0;
 	padding: 0;
-	font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
-	font-size: 13px;
+	font-family: "Open Sans", sans-serif;
+	font-size: 10pt;
 	line-height: 180%;
 	color: #333333;
 }
 
+html.no-mobile {
+	min-width: 990px;
+}
+
 h1#title {
-	font-weight: bold;
-	font-size: 20px;
-	letter-spacing: 0.4em;
+	font-weight: normal;
+	font-size: 18pt;
+	letter-spacing: 0.2em;
 	margin: 10px 10px 10px 15px;
 	padding-top: 5px;
 	padding-bottom: 5px;
@@ -20,9 +24,11 @@ h1#title {
 h1#title a {
 	color: #333300;
 	text-decoration: none;
+	font-family: "Libre Baskerville", sans-serif;
 }
 
 div#container {
+	position: relative;
 	border-bottom: 1px solid white;
 	border-top: 1px solid white;
 	background: white url(images/description_background.gif) repeat-y;
@@ -41,7 +47,7 @@ div#description span {
 	display: block;
 	margin: 20px;
 	text-align: justify;
- 	line-height: 18px;
+	line-height: 18px;
 	color: #336666;
 }
 
@@ -84,19 +90,27 @@ div#content {
 	width: 723px;
 }
 
-div#content h1 {
+div#content h2 {
 	color: #CC3300;
-	font-size: 20px;
-	font-family: georgia, serif;
+	font-size: 14pt;
+	font-family: "Libre Baskerville", sans-serif;
 	letter-spacing: 0.1em;
 	font-weight: normal;
 	margin-bottom: 10px;
 }
 
-div#content h2 {
+div#content h3 {
 	color: #CC3300;
-	font-size: 16px;
-	font-family: georgia, serif;
+	font-size: 12pt;
+	font-family: "Libre Baskerville", sans-serif;
+	letter-spacing: 0.1em;
+	font-weight: normal;
+	margin-bottom: 10px;
+}
+
+div#content h4 {
+	color: #CC3300;
+	font-family: "Libre Baskerville", sans-serif;
 	letter-spacing: 0.1em;
 	font-weight: normal;
 	margin-bottom: 10px;
@@ -138,5 +152,68 @@ strong {
 }
 
 table.contenttable td {
-    padding: 2px;
+	padding: 2px;
+	vertical-align: top;
+}
+
+.fancybox {
+	display: block;
+	float: left;
+	width: 100px;
+	height: 100px;
+	margin-left: 5px;
+	padding: 4px;
+	line-height: 1;
+	border: 1px solid #ddd;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+a.fancybox:hover {
+	border-color: #A4C2C2;
+	-webkit-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+	-moz-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+	box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+}
+
+.fancybox > img {
+	display: block;
+	max-width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.mobile #description {
+	display: none;
+}
+
+.mobile #container {
+	background-image: none;
+}
+
+.mobile #inner_container {
+	margin-left: 0;
+}
+
+.mobile.start-section #description
+{
+	display: block;
+	position: absolute;
+	top: 37px;
+	height: 172px;
+	width: 100%;
+	background-color: #a4c2c2;
+}
+
+.mobile.start-section #description img {
+	float: left;
+	padding-right: 10px;
+}
+
+.mobile.start-section #content {
+	margin-top: 172px;
 }
