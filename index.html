@@ -34,69 +34,68 @@
 	<meta property="og:description" content="Gelegen in einer ruhigen Wohnsiedlung, knapp 2 km vom Stadtzentrum entfernt, befindet sich in einem seperaten Anbau einer restaurierten Hofstelle mit altem Baumbestand und großzügiger Gartenanlage die Ferienwohnung &quot;Unter Eichen&quot;"/>
 </head>
 <body>
+	<h1 id="title"><a href="/">Ferienwohnung &#34;Unter Eichen&#34; in Lingen &#9733;&#9733;&#9733;</a></h1>
 
-<h1 id="title"><a href="/">Ferienwohnung &#34;Unter Eichen&#34; in Lingen &#9733;&#9733;&#9733;</a></h1>
-
-<div id="container">
-	<div id="description">
-		<img src="images/eingang.jpg" alt="" width="230px" height="172px">
-		<span>Gelegen in einer ruhigen Wohnsiedlung, knapp 2 km vom Stadtzentrum Lingen entfernt, befindet sich in einem seperaten Anbau einer restaurierten Hofstelle mit altem Baumbestand und großzügiger Gartenanlage die Ferienwohnung "Unter Eichen"</span>
-	</div>
-	<div id="inner_container">
-		<div id="menu">
-			<a href="javascript:">Start</a>
-			<a href="javascript:" class="active">Unsere Räume</a>
-			<a href="javascript:">Über Lingen</a>
-			<a href="javascript:">Anfahrt</a>
-			<a href="javascript:">Preise</a>
-			<a href="javascript:">Kontakt</a>
+	<div id="container">
+		<div id="description">
+			<img src="images/eingang.jpg" alt="" width="230px" height="172px">
+			<span>Gelegen in einer ruhigen Wohnsiedlung, knapp 2 km vom Stadtzentrum Lingen entfernt, befindet sich in einem seperaten Anbau einer restaurierten Hofstelle mit altem Baumbestand und großzügiger Gartenanlage die Ferienwohnung "Unter Eichen"</span>
 		</div>
-		<div id="content">
-			[[*content]]
+		<div id="inner_container">
+			<div id="menu">
+				<a href="javascript:">Start</a>
+				<a href="javascript:" class="active">Unsere Räume</a>
+				<a href="javascript:">Über Lingen</a>
+				<a href="javascript:">Anfahrt</a>
+				<a href="javascript:">Preise</a>
+				<a href="javascript:">Kontakt</a>
+			</div>
+			<div id="content">
+				[[*content]]
+			</div>
 		</div>
+		<div style="clear: both;">&nbsp;</div>
 	</div>
-	<div style="clear: both;">&nbsp;</div>
-</div>
 
-<script>
-	var _gaq = _gaq || [];
-	_gaq.push(['_setAccount', 'UA-36080374-1']);
-	_gaq.push(['_gat._anonymizeIp']);
-	_gaq.push(['_trackPageview']);
+	<script>
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-36080374-1']);
+		_gaq.push(['_gat._anonymizeIp']);
+		_gaq.push(['_trackPageview']);
 
-	head.ready('piwik', function() {
-		try {
-			var piwikTracker = Piwik.getTracker("//piwik.olle-orks.org/piwik.php", 5);
-			piwikTracker.trackPageView();
-			piwikTracker.enableLinkTracking();
-		} catch( err ) {}
-	});
+		head.ready('piwik', function() {
+			try {
+				var piwikTracker = Piwik.getTracker("//piwik.olle-orks.org/piwik.php", 5);
+				piwikTracker.trackPageView();
+				piwikTracker.enableLinkTracking();
+			} catch( err ) {}
+		});
 
-	head.js(
-		"//google-analytics.com/ga.js",
-		{piwik: "//piwik.olle-orks.org/piwik.js"}
-	);
-
-	if (window.location.href.match(/\/studio\//))
-	{
 		head.js(
-			"//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.0/jquery.min.js",
-			"//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.pack.js",
-			"//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-buttons.js",
-			"//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.js",
-			function() {
-				$(".fancybox").fancybox({
-					helpers: {
-						thumbs: {
-							width: 50,
-							height: 50
-						},
-						buttons: {}
-					}
-				});
-			}
+			"//google-analytics.com/ga.js",
+			{piwik: "//piwik.olle-orks.org/piwik.js"}
 		);
-	}
-</script>
+
+		if (window.location.href.match(/\/studio\//))
+		{
+			head.js(
+				"//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.0/jquery.min.js",
+				"//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.pack.js",
+				"//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-buttons.js",
+				"//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.js",
+				function() {
+					$(".fancybox").fancybox({
+						helpers: {
+							thumbs: {
+								width: 50,
+								height: 50
+							},
+							buttons: {}
+						}
+					});
+				}
+			);
+		}
+	</script>
 </body>
 </html>
