@@ -1,10 +1,17 @@
 @import "_normalize";
 
+@sans-font: "Open Sans", sans-serif;
+@serif-font: "Libre Baskerville", sans-serif;
+
+@red: #C00;
+@turquois-dark: #336666;
+@turquois-light: #a4c2c2;
+
 html, body {
 	background-color: #999966;
 	margin: 0;
 	padding: 0;
-	font-family: "Open Sans", sans-serif;
+	font-family: @sans-font;
 	font-size: 10pt;
 	line-height: 180%;
 	color: #333333;
@@ -14,135 +21,132 @@ html.no-mobile {
 	min-width: 990px;
 }
 
-h1#title {
+h3,
+strong {
+	font-weight: bold;
+}
+
+#title {
 	font-weight: normal;
 	font-size: 18pt;
 	letter-spacing: 0.2em;
 	margin: 10px 10px 10px 15px;
 	padding-top: 5px;
 	padding-bottom: 5px;
+
+	a {
+		color: #333300;
+		text-decoration: none;
+		font-family: @serif-font;
+	}
 }
 
-h1#title a {
-	color: #333300;
-	text-decoration: none;
-	font-family: "Libre Baskerville", sans-serif;
-}
-
-div#container {
+#container {
 	position: relative;
 	border-bottom: 1px solid white;
 	border-top: 1px solid white;
-	background: white url(../images/description_background.gif) repeat-y;
+	background: white url("../images/description_background.gif") repeat-y;
 }
 
-div#inner_container {
+#inner_container {
 	margin-left: 230px;
 }
 
-div#description {
+#description {
 	width: 230px;
 	float: left;
+
+	span {
+		display: block;
+		margin: 20px;
+		text-align: justify;
+		line-height: 18px;
+		color: @turquois-dark;
+	}
 }
 
-div#description span {
-	display: block;
-	margin: 20px;
-	text-align: justify;
-	line-height: 18px;
-	color: #336666;
-}
-
-div#menu {
-	background-color: #a4c2c2;
+#menu {
+	background-color: @turquois-light;
 	height: 36px;
 	margin-left: 1px;
-}
 
-div#menu a {
-	padding-left: 10px;
-	padding-right: 10px;
-	color: #336666;
-	vertical-align: middle;
-	line-height: 36px;
-	letter-spacing: 0.1em;
-	text-decoration: none;
-	font-weight: normal;
-	display: block;
-	float: left;
-	height: 36px;
-}
+	a {
+		padding-left: 10px;
+		padding-right: 10px;
+		color: @turquois-dark;
+		vertical-align: middle;
+		line-height: 36px;
+		letter-spacing: 0.1em;
+		text-decoration: none;
+		font-weight: normal;
+		display: block;
+		float: left;
+		height: 36px;
 
-div#menu a.active {
-	font-weight: bold;
-	background-color: #fff;
-}
+		&.active {
+			font-weight: bold;
+			background-color: #fff;
+		}
 
-div#menu a:hover {
-	color: #993300;
-}
+		&:hover {
+			color: @red;
+		}
 
-div#menu a.active:hover {
-	color: #336666;
+		&.active:hover {
+			color: @turquois-dark;
+		}
+	}
 }
 
 div#content {
 	float: left;
 	padding: 20px;
 	width: 723px;
-}
 
-div#content h2 {
-	color: #CC3300;
-	font-size: 14pt;
-	font-family: "Libre Baskerville", sans-serif;
-	letter-spacing: 0.1em;
-	font-weight: normal;
-	margin-bottom: 10px;
-}
+	h2, h3, h4, h5, h6 {
+		font-family: @serif-font;
+		letter-spacing: 0.1em;
+		margin: 0 0 10px 0;
+		font-weight: normal;
+		color: @red;
+	}
 
-div#content h3 {
-	color: #CC3300;
-	font-size: 12pt;
-	font-family: "Libre Baskerville", sans-serif;
-	letter-spacing: 0.1em;
-	font-weight: normal;
-	margin-bottom: 10px;
-}
+	h2 {
+		font-size: 14pt;
+	}
 
-div#content h4 {
-	color: #CC3300;
-	font-family: "Libre Baskerville", sans-serif;
-	letter-spacing: 0.1em;
-	font-weight: normal;
-	margin-bottom: 10px;
-}
+	h3 {
+		font-size: 12pt;
+	}
 
-div#content a {
-	color: #C00;
-	text-decoration: none;
-	font-weight: bold;
-}
+	h4 {
+		font-size: 100%;
+	}
 
-div#content a:hover {
-	text-decoration: underline;
-}
+	a {
+		color: @red;
+		text-decoration: none;
+		font-weight: bold;
 
-div#content ul,
-div#content p {
-	margin: 10px 0;
-}
+		&:hover {
+			text-decoration: underline;
+		}
+	}
 
-div#content li {
-	list-style: disc inside;
-	margin-left: 5px;
-	margin-top: 2px;
-	margin-bottom: 2px;
-}
+	ul {
+		padding: 0;
+	}
 
-h3,
-strong {
-	font-weight: bold;
+	ul, p {
+		margin: 10px 0;
+	}
+
+	li {
+		list-style: disc inside;
+		margin-left: 5px;
+		margin-top: 2px;
+		margin-bottom: 2px;
+	}
 }
 
 .csc-mailform li {
@@ -158,7 +162,7 @@ table.contenttable td {
 	vertical-align: top;
 }
 
-.fancybox {
+a.fancybox {
 	display: block;
 	float: left;
 	width: 100px;
@@ -173,49 +177,53 @@ table.contenttable td {
 	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
 	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+
+	&:hover {
+		border-color: @turquois-light;
+		-webkit-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+		-moz-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+		box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+	}
+
+	> img {
+		display: block;
+		max-width: 100%;
+		margin-right: auto;
+		margin-left: auto;
+	}
 }
 
-a.fancybox:hover {
-	border-color: #A4C2C2;
-	-webkit-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
-	-moz-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
-	box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
-}
+.mobile {
+	#description {
+		display: none;
+	}
 
-.fancybox > img {
-	display: block;
-	max-width: 100%;
-	margin-right: auto;
-	margin-left: auto;
-}
+	#container {
+		background-image: none;
+	}
 
-.mobile #description {
-	display: none;
-}
+	#inner_container {
+		margin-left: 0;
+	}
 
-.mobile #container {
-	background-image: none;
-}
+	&.start-section, &.repos-fewo_unter_eichen-section {
+		#description
+		{
+			display: block;
+			position: absolute;
+			top: 37px;
+			height: 172px;
+			width: 100%;
+			background-color: @turquois-light;
 
-.mobile #inner_container {
-	margin-left: 0;
-}
+			img {
+				float: left;
+				padding-right: 10px;
+			}
+		}
 
-.mobile.start-section #description
-{
-	display: block;
-	position: absolute;
-	top: 37px;
-	height: 172px;
-	width: 100%;
-	background-color: #a4c2c2;
-}
-
-.mobile.start-section #description img {
-	float: left;
-	padding-right: 10px;
-}
-
-.mobile.start-section #content {
-	margin-top: 172px;
+		#content {
+			margin-top: 172px;
+		}
+	}
 }

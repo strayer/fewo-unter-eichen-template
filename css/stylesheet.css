@@ -482,7 +482,11 @@ body {
 html.no-mobile {
   min-width: 990px;
 }
-h1#title {
+h3,
+strong {
+  font-weight: bold;
+}
+#title {
   font-weight: normal;
   font-size: 18pt;
   letter-spacing: 0.2em;
@@ -490,37 +494,37 @@ h1#title {
   padding-top: 5px;
   padding-bottom: 5px;
 }
-h1#title a {
+#title a {
   color: #333300;
   text-decoration: none;
   font-family: "Libre Baskerville", sans-serif;
 }
-div#container {
+#container {
   position: relative;
   border-bottom: 1px solid white;
   border-top: 1px solid white;
-  background: #ffffff url(../images/description_background.gif) repeat-y;
+  background: #ffffff url("../images/description_background.gif") repeat-y;
 }
-div#inner_container {
+#inner_container {
   margin-left: 230px;
 }
-div#description {
+#description {
   width: 230px;
   float: left;
 }
-div#description span {
+#description span {
   display: block;
   margin: 20px;
   text-align: justify;
   line-height: 18px;
   color: #336666;
 }
-div#menu {
+#menu {
   background-color: #a4c2c2;
   height: 36px;
   margin-left: 1px;
 }
-div#menu a {
+#menu a {
   padding-left: 10px;
   padding-right: 10px;
   color: #336666;
@@ -533,14 +537,14 @@ div#menu a {
   float: left;
   height: 36px;
 }
-div#menu a.active {
+#menu a.active {
   font-weight: bold;
   background-color: #fff;
 }
-div#menu a:hover {
-  color: #993300;
+#menu a:hover {
+  color: #cc0000;
 }
-div#menu a.active:hover {
+#menu a.active:hover {
   color: #336666;
 }
 div#content {
@@ -548,36 +552,36 @@ div#content {
   padding: 20px;
   width: 723px;
 }
-div#content h2 {
-  color: #CC3300;
-  font-size: 14pt;
+div#content h2,
+div#content h3,
+div#content h4,
+div#content h5,
+div#content h6 {
   font-family: "Libre Baskerville", sans-serif;
   letter-spacing: 0.1em;
+  margin: 0 0 10px 0;
   font-weight: normal;
-  margin-bottom: 10px;
+  color: #cc0000;
+}
+div#content h2 {
+  font-size: 14pt;
 }
 div#content h3 {
-  color: #CC3300;
   font-size: 12pt;
-  font-family: "Libre Baskerville", sans-serif;
-  letter-spacing: 0.1em;
-  font-weight: normal;
-  margin-bottom: 10px;
 }
 div#content h4 {
-  color: #CC3300;
-  font-family: "Libre Baskerville", sans-serif;
-  letter-spacing: 0.1em;
-  font-weight: normal;
-  margin-bottom: 10px;
+  font-size: 100%;
 }
 div#content a {
-  color: #C00;
+  color: #cc0000;
   text-decoration: none;
   font-weight: bold;
 }
 div#content a:hover {
   text-decoration: underline;
+}
+div#content ul {
+  padding: 0;
 }
 div#content ul,
 div#content p {
@@ -589,10 +593,6 @@ div#content li {
   margin-top: 2px;
   margin-bottom: 2px;
 }
-h3,
-strong {
-  font-weight: bold;
-}
 .csc-mailform li {
   list-style: none !important;
 }
@@ -603,7 +603,7 @@ table.contenttable td {
   padding: 2px;
   vertical-align: top;
 }
-.fancybox {
+a.fancybox {
   display: block;
   float: left;
   width: 100px;
@@ -620,12 +620,12 @@ table.contenttable td {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 a.fancybox:hover {
-  border-color: #A4C2C2;
+  border-color: #a4c2c2;
   -webkit-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
   -moz-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
   box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
 }
-.fancybox > img {
+a.fancybox > img {
   display: block;
   max-width: 100%;
   margin-right: auto;
@@ -640,7 +640,8 @@ a.fancybox:hover {
 .mobile #inner_container {
   margin-left: 0;
 }
-.mobile.start-section #description {
+.mobile.start-section #description,
+.mobile.repos-fewo_unter_eichen-section #description {
   display: block;
   position: absolute;
   top: 37px;
@@ -648,10 +649,12 @@ a.fancybox:hover {
   width: 100%;
   background-color: #a4c2c2;
 }
-.mobile.start-section #description img {
+.mobile.start-section #description img,
+.mobile.repos-fewo_unter_eichen-section #description img {
   float: left;
   padding-right: 10px;
 }
-.mobile.start-section #content {
+.mobile.start-section #content,
+.mobile.repos-fewo_unter_eichen-section #content {
   margin-top: 172px;
 }
