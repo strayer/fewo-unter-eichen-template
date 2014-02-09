@@ -1,3 +1,2 @@
 #!/usr/bin/env bash
-lessc stylesheet.less > stylesheet.css
-uglifycss stylesheet.css > stylesheet.min.css
+lessc --verbose -x --clean-css --strict-imports -ru stylesheet.less stylesheet.min.css
